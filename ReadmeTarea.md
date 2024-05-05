@@ -14,7 +14,8 @@ Dado que el sistema está diseñado para ser accesible y fácil de probar, recom
 
 3.- Una vez en el inicio selecciona "New Repl" y elige "Import from GitHub".
 
-4.- Pegar este link = (poner link cuando se suba).
+4.- Pegar este link = https://github.com/DavidHenriquezz/Busqueda_Peliculas
+
 
 5.- Repl.it clonará el repositorio y te preparará un entorno de ejecución.
 
@@ -2387,10 +2388,10 @@ Presione una tecla para continuar...
 ### Benjamín Sepúlveda:
 
 - Desarrolló las funciones de buscar por década y género, buscar por década.
-- Soluciono errores visibles en el codigo
-- Perfeccionó funciones para evitar errores
-- Redacción del README
-- **Auto-evaluación**: 3 Aporte exelente).
+- Solucionó errores visibles en el codigo.
+- Perfeccionó funciones para evitar errores.
+- Redacción del README.
+- **Auto-evaluación**: 3 (Aporte exelente).
 
 ### David Henriquez:
 
