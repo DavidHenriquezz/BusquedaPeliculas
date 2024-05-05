@@ -161,12 +161,10 @@ void cargar_peliculas(Map *pelis_byid, Map *pelis_byrating, Map *pelis_bydecada,
       borrarComillas(campos[14]); //Borramos las comillas en caso de que haya
       //printf("Primer caracter: %c\n", campos[14][0]);
       char *token2 = strtok(campos[14], ","); //Cortamos el campo de directores hasta una coma
-
       while (token2 != NULL) { //Mientras token2 no sea NULL
-
         char *clean_token2 = espacioInicial(token2); //Limpiaremos el director en caso de que tenga espacios al principio
         //printf("%s\n", clean_token2);
-        list_pushBack(peli->director, strdup(clean_token2)); //Ahora agregamos el director a la lista de directores de la película
+        list_pushFront(peli->director, strdup(clean_token2)); //Ahora agregamos el director a la lista de directores de la película
         token2 = strtok(NULL, ","); //Volvemos a cortar la siguiente parte de la cadena hasta la coma
 
       }
@@ -222,8 +220,10 @@ void cargar_peliculas(Map *pelis_byid, Map *pelis_byrating, Map *pelis_bydecada,
     
     List *director_list = peli->director;
     void *director_ptr = list_first(director_list);
+    
     while (director_ptr != NULL){
       char *director = (char *)director_ptr;
+      printf("%s\n", director);
       //printf("%s- ", director);
       //quitarEspacios(director);
       //aMinusculas(director);

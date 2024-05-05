@@ -2,7 +2,7 @@
 
 ## Descripción
 
-Este sistema permite a los usuarios cargar una base de datos de peliculas, en cual se podrá filtrar de diversas maneras para encontrar la deseada. Los usuarios pueden cargar la base de datos, buscar por ID, buscar por director, Buscar por genero, buscar por decada, buscar por rango de calificaciones y buscar por decada y genero.
+Este sistema permite a los usuarios cargar una base de datos de películas, en el cual se podrá filtrar de diversas maneras para encontrar la deseada. Los usuarios pueden cargar la base de datos, buscar por ID, buscar por director, Buscar por género, buscar por década, buscar por rango de calificaciones y buscar por década y género.
 
 ## Cómo compilar y ejecutar
 
@@ -10,21 +10,21 @@ Dado que el sistema está diseñado para ser accesible y fácil de probar, recom
 
 1.- Visita Repl.it.
 
-2.- Crea una cuenta o inicia sesion.
+2.- Crea una cuenta o inicia sesión.
 
-3.- Una vez en el inicio selecciona  "New Repl" y elige "Import from GitHub".
+3.- Una vez en el inicio selecciona "New Repl" y elige "Import from GitHub".
 
-4.- Pegar este link = (poner link cuando se suba)
+4.- Pegar este link = (poner link cuando se suba).
 
-5.- Repl.it clonara el repositorio y te preparará un entorno de ejecución
+5.- Repl.it clonará el repositorio y te preparará un entorno de ejecución.
 
-6.- Aprete el boton "Run" para que el codigo se ejecute
+6.- Aprete el boton "Run" para que el codigo se ejecute.
 
 ## Funcionalidades
 
 ### Funcionando correctamente:
 
-- Cargar Peliculas.
+- Cargar Películas.
 - Buscar por ID.
 - Buscar por director.
 - Buscar por género.
@@ -34,18 +34,20 @@ Dado que el sistema está diseñado para ser accesible y fácil de probar, recom
 
 ### A mejorar:
 
-- Modificar la interfaz para que sea más amigable
-- Permitir que se añadan más peliculas
+- Modificar la interfaz para que sea más amigable.
+- Permitir que se añadan más peliculas.
+- Mostrar las películas en algún orden (Alfabético, por ranking, entre otros).
 
 ### Posibles errores:
 
-- Al ingresar el genero en minusculas o en mayusculas(se debe ingresar capitalizado. Ejemplo: "Drama")
+- Al ingresar el género o el director en minúsculas, no se encuentra. Se debe ingresar capitalizado (ejemplo: "Drama").
+- La interfaz del programa se vuelve "loca" y muestra muchas cosas en menos de 1 segundo en las siguientes situaciones: Al ingresar un carácter que no es un número al buscar por década o rating, al ingresar una cantidad de caracteres mayor al permitido.
 
 ## Ejemplo de uso
 
 **Paso 1: Cargar Películas**
 
-Se comienza cargando la base de datos de las peliculas
+Se comienza cargando la base de datos de las peliculas.
 ```
 ========================================
      Base de Datos de Películas
@@ -1571,7 +1573,7 @@ Se busca la pelicula según el criterio elegido.
 
 **2.1 : Buscar por ID**
 
-Se inicia la busqueda según la ID de la pelicula deseada, una vez encontrada el sistema mostrara el titulo, el año, director/es y rating.
+Se inicia la búsqueda según la ID de la película deseada, una vez encontrada el sistema mostrará sus datos.
 
 ```
 ========================================
@@ -1596,9 +1598,7 @@ Presione una tecla para continuar...
 
 **2.2 : Buscar por director**
 
-**2.3 : Buscar por género**
-
-Se inicia una busqueda según el género elegido por el usuario, una vez encontrado se mostrará el nombre, año y rating.
+Se inicia la búsqueda según el director elegido por el usuario. Una vez encontrado, se muestran los datos de cada una de sus películas.
 
 ````
 ========================================
@@ -1612,135 +1612,445 @@ Se inicia una busqueda según el género elegido por el usuario, una vez encontr
 6) Buscar por rango de calificaciones
 7) Buscar por década y género
 8) Salir
-Ingrese su opción: 4
+Ingrese su opción: 3
+Ingrese el nombre del director: Christopher Nolan
+-------------------------------
+Título: Memento
+Año: 2000
+Director(es):Christopher Nolan
+Género(s):Mystery, Thriller
+Rating: 8.4
+-------------------------------
+Título: The Dark Knight
+Año: 2008
+Director(es):Christopher Nolan
+Género(s):Action, Crime, Drama, Thriller
+Rating: 9.0
+-------------------------------
+Título: Inception
+Año: 2010
+Director(es):Christopher Nolan
+Género(s):Action, Adventure, Sci-Fi, Thriller
+Rating: 8.8
+-------------------------------
+Título: The Dark Knight Rises
+Año: 2012
+Director(es):Christopher Nolan
+Género(s):Action, Drama, Thriller
+Rating: 8.4
+-------------------------------
+Título: The Prestige
+Año: 2006
+Director(es):Christopher Nolan
+Género(s):Drama, Mystery, Sci-Fi, Thriller
+Rating: 8.5
+-------------------------------
+Título: Insomnia
+Año: 2002
+Director(es):Christopher Nolan
+Género(s):Drama, Mystery, Thriller
+Rating: 7.2
+-------------------------------
+Título: Batman Begins
+Año: 2005
+Director(es):Christopher Nolan
+Género(s):Action, Crime, Drama
+Rating: 8.2
+-------------------------------
+Título: Following
+Año: 1998
+Director(es):Christopher Nolan
+Género(s):Crime, Mystery, Thriller
+Rating: 7.4
+-------------------------------
+Presione una tecla para continuar...
+````
+**2.3 : Buscar por género**
+
+Se inicia una búsqueda según el género elegido por el usuario, una vez encontrado se mostrará sus datos.
+
+````
+========================================
+     Base de Datos de Películas
+========================================
+1) Cargar Películas
+2) Buscar por id
+3) Buscar por director
+4) Buscar por género
+5) Buscar por década
+6) Buscar por rango de calificaciones
+7) Buscar por década y género
+8) Salir
+Ingrese su opción: 
+4
 Ingrese el género de la película: Film-Noir
 -------------------------------
-Título: Double Indemnity, Año: 1944, Rating: 8.3, Genero: Film-Noir
+Título: Double Indemnity
+Año: 1944
+Director(es):Billy Wilder
+Género(s):Crime, Drama, Film-Noir, Mystery, Thriller
+Rating: 8.3
 -------------------------------
-Título: The Maltese Falcon, Año: 1941, Rating: 8.0, Genero: Film-Noir
+Título: The Maltese Falcon
+Año: 1941
+Director(es):John Huston
+Género(s):Crime, Film-Noir, Mystery, Romance
+Rating: 8.0
 -------------------------------
-Título: Sunset Blvd., Año: 1950, Rating: 8.4, Genero: Film-Noir
+Título: Sunset Blvd.
+Año: 1950
+Director(es):Billy Wilder
+Género(s):Drama, Film-Noir
+Rating: 8.4
 -------------------------------
-Título: Out of the Past, Año: 1947, Rating: 8.0, Genero: Film-Noir
+Título: Out of the Past
+Año: 1947
+Director(es):Jacques Tourneur
+Género(s):Crime, Drama, Film-Noir, Romance, Thriller
+Rating: 8.0
 -------------------------------
-Título: Touch of Evil, Año: 1958, Rating: 8.0, Genero: Film-Noir
+Título: Touch of Evil
+Año: 1958
+Director(es):Orson Welles
+Género(s):Crime, Drama, Film-Noir, Thriller
+Rating: 8.0
 -------------------------------
-Título: Sweet Smell of Success, Año: 1957, Rating: 8.0, Genero: Film-Noir
+Título: Sweet Smell of Success
+Año: 1957
+Director(es):Alexander Mackendrick
+Género(s):Drama, Film-Noir
+Rating: 8.0
 -------------------------------
-Título: The Big Sleep, Año: 1946, Rating: 7.9, Genero: Film-Noir
+Título: The Big Sleep
+Año: 1946
+Director(es):Howard Hawks
+Género(s):Crime, Film-Noir, Mystery, Thriller
+Rating: 7.9
 -------------------------------
-Título: The Third Man, Año: 1949, Rating: 8.1, Genero: Film-Noir
+Título: The Third Man
+Año: 1949
+Director(es):Carol Reed
+Género(s):Film-Noir, Mystery, Thriller
+Rating: 8.1
 -------------------------------
-Título: Nora inu, Año: 1949, Rating: 7.8, Genero: Film-Noir
+Título: Nora inu
+Año: 1949
+Director(es):Akira Kurosawa
+Género(s):Crime, Drama, Film-Noir, Mystery, Thriller
+Rating: 7.8
 -------------------------------
-Título: Ace in the Hole, Año: 1951, Rating: 8.1, Genero: Film-Noir
+Título: Ace in the Hole
+Año: 1951
+Director(es):Billy Wilder
+Género(s):Drama, Film-Noir
+Rating: 8.1
 -------------------------------
-Título: The Stranger, Año: 1946, Rating: 7.3, Genero: Film-Noir
+Título: The Stranger
+Año: 1946
+Director(es):Orson Welles
+Género(s):Crime, Drama, Film-Noir, Mystery, Thriller
+Rating: 7.3
 -------------------------------
-Título: Fury, Año: 1936, Rating: 7.8, Genero: Film-Noir
+Título: Fury
+Año: 1936
+Director(es):Fritz Lang
+Género(s):Crime, Drama, Film-Noir, Thriller
+Rating: 7.8
 -------------------------------
-Título: Strangers on a Train, Año: 1951, Rating: 7.9, Genero: Film-Noir
+Título: Strangers on a Train
+Año: 1951
+Director(es):Alfred Hitchcock
+Género(s):Crime, Drama, Film-Noir, Thriller
+Rating: 7.9
 -------------------------------
-Título: White Heat, Año: 1949, Rating: 8.1, Genero: Film-Noir
+Título: White Heat
+Año: 1949
+Director(es):Raoul Walsh
+Género(s):Action, Crime, Drama, Film-Noir
+Rating: 8.1
 -------------------------------
-Título: Notorious, Año: 1946, Rating: 7.9, Genero: Film-Noir
+Título: Notorious
+Año: 1946
+Director(es):Alfred Hitchcock
+Género(s):Drama, Film-Noir, Romance, Thriller
+Rating: 7.9
 -------------------------------
-Título: To Have and Have Not, Año: 1944, Rating: 7.8, Genero: Film-Noir
+Título: To Have and Have Not
+Año: 1944
+Director(es):Howard Hawks
+Género(s):Adventure, Comedy, Film-Noir, Romance, Thriller, War
+Rating: 7.8
 -------------------------------
-Título: The Postman Always Rings Twice, Año: 1946, Rating: 7.4, Genero: Film-Noir
+Título: The Postman Always Rings Twice
+Año: 1946
+Director(es):Tay Garnett
+Género(s):Crime, Drama, Film-Noir, Mystery, Romance, Thriller
+Rating: 7.4
 -------------------------------
-Título: Laura, Año: 1944, Rating: 7.9, Genero: Film-Noir
+Título: Laura
+Año: 1944
+Director(es):Rouben Mamoulian, Otto Preminger
+Género(s):Drama, Film-Noir, Mystery
+Rating: 7.9
 -------------------------------
-Título: Mildred Pierce, Año: 1945, Rating: 7.9, Genero: Film-Noir
+Título: Mildred Pierce
+Año: 1945
+Director(es):Michael Curtiz
+Género(s):Crime, Drama, Film-Noir, Mystery, Romance
+Rating: 7.9
 -------------------------------
-Título: Shadow of a Doubt, Año: 1943, Rating: 7.8, Genero: Film-Noir
+Título: Shadow of a Doubt
+Año: 1943
+Director(es):Alfred Hitchcock
+Género(s):Film-Noir, Thriller
+Rating: 7.8
 -------------------------------
-Título: Scarface, Año: 1932, Rating: 7.7, Genero: Film-Noir
+Título: Scarface
+Año: 1932
+Director(es):Howard Hawks, Richard Rosson
+Género(s):Action, Crime, Drama, Film-Noir, Thriller
+Rating: 7.7
 -------------------------------
-Título: Gilda, Año: 1946, Rating: 7.6, Genero: Film-Noir
+Título: Gilda
+Año: 1946
+Director(es):Charles Vidor
+Género(s):Drama, Film-Noir, Romance, Thriller
+Rating: 7.6
 -------------------------------
-Título: Born to Kill, Año: 1947, Rating: 7.2, Genero: Film-Noir
+Título: Born to Kill
+Año: 1947
+Director(es):Robert Wise
+Género(s):Crime, Drama, Film-Noir, Thriller
+Rating: 7.2
 -------------------------------
-Título: Mr. Arkadin, Año: 1955, Rating: 7.1, Genero: Film-Noir
+Título: Mr. Arkadin
+Año: 1955
+Director(es):Orson Welles
+Género(s):Crime, Drama, Film-Noir, Mystery, Thriller
+Rating: 7.1
 -------------------------------
-Título: The Strange Love of Martha Ivers, Año: 1946, Rating: 7.4, Genero: Film-Noir
+Título: The Strange Love of Martha Ivers
+Año: 1946
+Director(es):Lewis Milestone
+Género(s):Drama, Film-Noir, Romance
+Rating: 7.4
 -------------------------------
-Título: The Lost Weekend, Año: 1945, Rating: 7.9, Genero: Film-Noir
+Título: The Lost Weekend
+Año: 1945
+Director(es):Billy Wilder
+Género(s):Drama, Film-Noir
+Rating: 7.9
 -------------------------------
-Título: Crossfire, Año: 1947, Rating: 7.3, Genero: Film-Noir
+Título: Crossfire
+Año: 1947
+Director(es):Edward Dmytryk
+Género(s):Crime, Drama, Film-Noir, Mystery
+Rating: 7.3
 -------------------------------
-Título: Panic in the Streets, Año: 1950, Rating: 7.2, Genero: Film-Noir
+Título: Panic in the Streets
+Año: 1950
+Director(es):Elia Kazan
+Género(s):Crime, Drama, Film-Noir, Thriller
+Rating: 7.2
 -------------------------------
-Título: The Big Combo, Año: 1955, Rating: 7.3, Genero: Film-Noir
+Título: The Big Combo
+Año: 1955
+Director(es):Joseph H. Lewis
+Género(s):Crime, Drama, Film-Noir, Thriller
+Rating: 7.3
 -------------------------------
-Título: Dark Passage, Año: 1947, Rating: 7.5, Genero: Film-Noir
+Título: Dark Passage
+Año: 1947
+Director(es):Delmer Daves
+Género(s):Film-Noir, Thriller
+Rating: 7.5
 -------------------------------
-Título: The Night of the Hunter, Año: 1955, Rating: 8.0, Genero: Film-Noir
+Título: The Night of the Hunter
+Año: 1955
+Director(es):Charles Laughton
+Género(s):Crime, Drama, Film-Noir, Thriller
+Rating: 8.0
 -------------------------------
-Título: The Asphalt Jungle, Año: 1950, Rating: 7.8, Genero: Film-Noir
+Título: The Asphalt Jungle
+Año: 1950
+Director(es):John Huston
+Género(s):Crime, Drama, Film-Noir, Thriller
+Rating: 7.8
 -------------------------------
-Título: Angels with Dirty Faces, Año: 1938, Rating: 7.9, Genero: Film-Noir
+Título: Angels with Dirty Faces
+Año: 1938
+Director(es):Michael Curtiz
+Género(s):Crime, Drama, Film-Noir, Thriller
+Rating: 7.9
 -------------------------------
-Título: Pickup on South Street, Año: 1953, Rating: 7.6, Genero: Film-Noir
+Título: Pickup on South Street
+Año: 1953
+Director(es):Samuel Fuller
+Género(s):Crime, Film-Noir, Mystery, Thriller
+Rating: 7.6
 -------------------------------
-Título: Stage Fright, Año: 1950, Rating: 7.0, Genero: Film-Noir
+Título: Stage Fright
+Año: 1950
+Director(es):Alfred Hitchcock
+Género(s):Film-Noir, Mystery, Thriller
+Rating: 7.0
 -------------------------------
-Título: Key Largo, Año: 1948, Rating: 7.7, Genero: Film-Noir
+Título: Key Largo
+Año: 1948
+Director(es):John Huston
+Género(s):Action, Crime, Drama, Film-Noir, Thriller
+Rating: 7.7
 -------------------------------
-Título: The Killers, Año: 1946, Rating: 7.7, Genero: Film-Noir
+Título: The Killers
+Año: 1946
+Director(es):Robert Siodmak
+Género(s):Crime, Drama, Film-Noir, Mystery
+Rating: 7.7
 -------------------------------
-Título: Niagara, Año: 1953, Rating: 7.0, Genero: Film-Noir
+Título: Niagara
+Año: 1953
+Director(es):Henry Hathaway
+Género(s):Film-Noir, Thriller
+Rating: 7.0
 -------------------------------
-Título: Spellbound, Año: 1945, Rating: 7.5, Genero: Film-Noir
+Título: Spellbound
+Año: 1945
+Director(es):Alfred Hitchcock
+Género(s):Film-Noir, Mystery, Romance, Thriller
+Rating: 7.5
 -------------------------------
-Título: The Killing, Año: 1956, Rating: 7.9, Genero: Film-Noir
+Título: The Killing
+Año: 1956
+Director(es):Stanley Kubrick
+Género(s):Crime, Drama, Film-Noir, Thriller
+Rating: 7.9
 -------------------------------
-Título: Night and the City, Año: 1950, Rating: 7.9, Genero: Film-Noir
+Título: Night and the City
+Año: 1950
+Director(es):Jules Dassin
+Género(s):Crime, Film-Noir, Mystery, Sport, Thriller
+Rating: 7.9
 -------------------------------
-Título: Brute Force, Año: 1947, Rating: 7.6, Genero: Film-Noir
+Título: Brute Force
+Año: 1947
+Director(es):Jules Dassin
+Género(s):Crime, Drama, Film-Noir, Thriller
+Rating: 7.6
 -------------------------------
-Título: All the King's Men, Año: 1949, Rating: 7.4, Genero: Film-Noir
+Título: All the King's Men
+Año: 1949
+Director(es):Robert Rossen
+Género(s):Drama, Film-Noir
+Rating: 7.4
 -------------------------------
-Título: Call Northside 777, Año: 1948, Rating: 7.4, Genero: Film-Noir
+Título: Call Northside 777
+Año: 1948
+Director(es):Henry Hathaway
+Género(s):Drama, Film-Noir
+Rating: 7.4
 -------------------------------
-Título: Suddenly, Año: 1954, Rating: 6.8, Genero: Film-Noir
+Título: Suddenly
+Año: 1954
+Director(es):Lewis Allen
+Género(s):Crime, Drama, Film-Noir, Thriller
+Rating: 6.8
 -------------------------------
-Título: Marked Woman, Año: 1937, Rating: 7.1, Genero: Film-Noir
+Título: Marked Woman
+Año: 1937
+Director(es):Michael Curtiz, Lloyd Bacon
+Género(s):Crime, Film-Noir, Thriller
+Rating: 7.1
 -------------------------------
-Título: Don't Bother to Knock, Año: 1952, Rating: 6.9, Genero: Film-Noir
+Título: Don't Bother to Knock
+Año: 1952
+Director(es):Roy Ward Baker
+Género(s):Drama, Film-Noir, Mystery, Thriller
+Rating: 6.9
 -------------------------------
-Título: Suspicion, Año: 1941, Rating: 7.3, Genero: Film-Noir
+Título: Suspicion
+Año: 1941
+Director(es):Alfred Hitchcock
+Género(s):Film-Noir, Mystery, Thriller
+Rating: 7.3
 -------------------------------
-Título: The Wrong Man, Año: 1956, Rating: 7.4, Genero: Film-Noir
+Título: The Wrong Man
+Año: 1956
+Director(es):Alfred Hitchcock
+Género(s):Drama, Film-Noir
+Rating: 7.4
 -------------------------------
-Título: Scarlet Street, Año: 1945, Rating: 7.7, Genero: Film-Noir
+Título: Scarlet Street
+Año: 1945
+Director(es):Fritz Lang
+Género(s):Crime, Drama, Film-Noir, Thriller
+Rating: 7.7
 -------------------------------
-Título: Kiss Me Deadly, Año: 1955, Rating: 7.5, Genero: Film-Noir
+Título: Kiss Me Deadly
+Año: 1955
+Director(es):Robert Aldrich
+Género(s):Crime, Film-Noir, Mystery, Sci-Fi, Thriller
+Rating: 7.5
 -------------------------------
-Título: Somewhere in the Night, Año: 1946, Rating: 7.0, Genero: Film-Noir
+Título: Somewhere in the Night
+Año: 1946
+Director(es):Joseph L. Mankiewicz
+Género(s):Crime, Drama, Film-Noir, Mystery, Romance
+Rating: 7.0
 -------------------------------
-Título: He Walked by Night, Año: 1948, Rating: 7.0, Genero: Film-Noir
+Título: He Walked by Night
+Año: 1948
+Director(es):Anthony Mann, Alfred L. Werker
+Género(s):Crime, Film-Noir, Thriller
+Rating: 7.0
 -------------------------------
-Título: Deception, Año: 1946, Rating: 7.0, Genero: Film-Noir
+Título: Deception
+Año: 1946
+Director(es):Irving Rapper
+Género(s):Drama, Film-Noir, Music, Romance
+Rating: 7.0
 -------------------------------
-Título: Impact, Año: 1949, Rating: 7.0, Genero: Film-Noir
+Título: Impact
+Año: 1949
+Director(es):Arthur Lubin
+Género(s):Crime, Drama, Film-Noir, Thriller
+Rating: 7.0
 -------------------------------
-Título: Quicksand, Año: 1950, Rating: 6.6, Genero: Film-Noir
+Título: Quicksand
+Año: 1950
+Director(es):Irving Pichel
+Género(s):Crime, Drama, Film-Noir, Romance
+Rating: 6.6
 -------------------------------
-Título: The Set-Up, Año: 1949, Rating: 7.8, Genero: Film-Noir
+Título: The Set-Up
+Año: 1949
+Director(es):Robert Wise
+Género(s):Crime, Film-Noir, Sport
+Rating: 7.8
 -------------------------------
-Título: Odd Man Out, Año: 1947, Rating: 7.6, Genero: Film-Noir
+Título: Odd Man Out
+Año: 1947
+Director(es):Carol Reed
+Género(s):Crime, Drama, Film-Noir, Thriller
+Rating: 7.6
 -------------------------------
-Título: The Naked City, Año: 1948, Rating: 7.5, Genero: Film-Noir
+Título: The Naked City
+Año: 1948
+Director(es):Jules Dassin
+Género(s):Crime, Drama, Film-Noir, Mystery, Thriller
+Rating: 7.5
 -------------------------------
-Título: Angel Face, Año: 1952, Rating: 7.2, Genero: Film-Noir
+Título: Angel Face
+Año: 1952
+Director(es):Otto Preminger
+Género(s):Crime, Drama, Film-Noir, Romance, Thriller
+Rating: 7.2
 -------------------------------
 Presione una tecla para continuar...
 ````
 
 **2.4 : Buscar por década**
 
-Se inicia una busqueda según la década elegida por el usuario, una vez encontrado se mostrará el nombre, año y rating.
+Se inicia una busqueda según la década elegida por el usuario, una vez encontrado se mostrará sus datos.
 ````
 ========================================
      Base de Datos de Películas
@@ -1756,60 +2066,162 @@ Se inicia una busqueda según la década elegida por el usuario, una vez encontr
 Ingrese su opción: 5
 Ingrese la decada de la película: 20
 -------------------------------
-Título: The Gold Rush, Año: 1925, Rating: 8.1
+Título: The General
+Año: 1926
+Director(es):Clyde Bruckman, Buster Keaton
+Género(s):Action, Adventure, Comedy, Drama, War
+Rating: 8.1
 -------------------------------
-Título: Das Cabinet des Dr. Caligari, Año: 1920, Rating: 8.0
+Título: The Gold Rush
+Año: 1925
+Director(es):Charles Chaplin
+Género(s):Adventure, Comedy, Drama, Romance, Western
+Rating: 8.1
 -------------------------------
-Título: Seven Chances, Año: 1925, Rating: 7.8
+Título: Das Cabinet des Dr. Caligari
+Año: 1920
+Director(es):Robert Wiene
+Género(s):Horror, Mystery, Thriller
+Rating: 8.0
 -------------------------------
-Título: The Kid, Año: 1921, Rating: 8.2
+Título: Seven Chances
+Año: 1925
+Director(es):Buster Keaton
+Género(s):Comedy, Romance
+Rating: 7.8
 -------------------------------
-Título: The Navigator, Año: 1924, Rating: 7.6
+Título: The Kid
+Año: 1921
+Director(es):Charles Chaplin
+Género(s):Comedy, Drama, Family
+Rating: 8.2
 -------------------------------
-Título: Bronenosets Potyomkin, Año: 1925, Rating: 7.9
+Título: The Navigator
+Año: 1924
+Director(es):Buster Keaton, Donald Crisp
+Género(s):Action, Comedy, Romance
+Rating: 7.6
 -------------------------------
-Título: Our Hospitality, Año: 1923, Rating: 7.8
+Título: Bronenosets Potyomkin
+Año: 1925
+Director(es):Sergei Eisenstein
+Género(s):Drama, History, Thriller, War
+Rating: 7.9
 -------------------------------
-Título: Der letzte Mann, Año: 1924, Rating: 8.0
+Título: Our Hospitality
+Año: 1923
+Director(es):Buster Keaton, John G. Blystone
+Género(s):Comedy, Romance, Thriller
+Rating: 7.8
 -------------------------------
-Título: Sherlock Jr., Año: 1924, Rating: 8.2
+Título: Der letzte Mann
+Año: 1924
+Director(es):F.W. Murnau
+Género(s):Drama
+Rating: 8.0
 -------------------------------
-Título: Battling Butler, Año: 1926, Rating: 7.0
+Título: Sherlock Jr.
+Año: 1924
+Director(es):Buster Keaton
+Género(s):Action, Comedy, Romance
+Rating: 8.2
 -------------------------------
-Título: Steamboat Bill, Jr., Año: 1928, Rating: 7.8
+Título: Battling Butler
+Año: 1926
+Director(es):Buster Keaton
+Género(s):Comedy, Sport
+Rating: 7.0
 -------------------------------
-Título: The Circus, Año: 1928, Rating: 8.1
+Título: Steamboat Bill, Jr.
+Año: 1928
+Director(es):Buster Keaton, Charles Reisner
+Género(s):Action, Comedy, Drama, Family, Romance
+Rating: 7.8
 -------------------------------
-Título: It, Año: 1927, Rating: 7.2
+Título: The Circus
+Año: 1928
+Director(es):Charles Chaplin
+Género(s):Comedy, Family, Romance
+Rating: 8.1
 -------------------------------
-Título: The Cameraman, Año: 1928, Rating: 8.0
+Título: It
+Año: 1927
+Director(es):Josef von Sternberg, Clarence G. Badger
+Género(s):Comedy, Romance
+Rating: 7.2
 -------------------------------
-Título: Three Ages, Año: 1923, Rating: 7.0
+Título: The Cameraman
+Año: 1928
+Director(es):Buster Keaton, Edward Sedgwick
+Género(s):Comedy, Drama, Family, Romance
+Rating: 8.0
 -------------------------------
-Título: The Ten Commandments, Año: 1923, Rating: 6.8
+Título: Three Ages
+Año: 1923
+Director(es):Buster Keaton, Edward F. Cline
+Género(s):Comedy
+Rating: 7.0
 -------------------------------
-Título: The Cocoanuts, Año: 1929, Rating: 6.8
+Título: The Ten Commandments
+Año: 1923
+Director(es):Cecil B. DeMille
+Género(s):Biography, Drama, History
+Rating: 6.8
 -------------------------------
-Título: College, Año: 1927, Rating: 6.9
+Título: The Cocoanuts
+Año: 1929
+Director(es):Joseph Santley, Robert Florey
+Género(s):Comedy, Musical, Romance
+Rating: 6.8
 -------------------------------
-Título: Blackmail, Año: 1929, Rating: 6.9
+Título: College
+Año: 1927
+Director(es):James W. Horne, Buster Keaton
+Género(s):Comedy, Drama, Sport
+Rating: 6.9
 -------------------------------
-Título: Flesh and the Devil, Año: 1926, Rating: 7.6
+Título: Blackmail
+Año: 1929
+Director(es):Alfred Hitchcock
+Género(s):Crime, Drama, Thriller
+Rating: 6.9
 -------------------------------
-Título: Go West, Año: 1925, Rating: 7.1
+Título: Flesh and the Devil
+Año: 1926
+Director(es):Clarence Brown
+Género(s):Drama
+Rating: 7.6
 -------------------------------
-Título: The Ring, Año: 1927, Rating: 6.1
+Título: Go West
+Año: 1925
+Director(es):Buster Keaton
+Género(s):Comedy, Western
+Rating: 7.1
 -------------------------------
-Título: The Lodger: A Story of the London Fog, Año: 1927, Rating: 7.3
+Título: The Ring
+Año: 1927
+Director(es):Alfred Hitchcock
+Género(s):Drama, Romance, Sport
+Rating: 6.1
 -------------------------------
-Título: Champagne, Año: 1928, Rating: 5.4
+Título: The Lodger: A Story of the London Fog
+Año: 1927
+Director(es):Alfred Hitchcock
+Género(s):Crime, Drama, Mystery, Thriller
+Rating: 7.3
+-------------------------------
+Título: Champagne
+Año: 1928
+Director(es):Alfred Hitchcock
+Género(s):Comedy
+Rating: 5.4
 -------------------------------
 Presione una tecla para continuar...
 ````
 
 **2.5 : Buscar por rango de calificaciones**
 
-Se le pregunta al usuario un rango de calificaciones en la cual desea buscar y usa vez filtrado se mostraran las peliculas junto a su nombre, año y rating.
+Se le pregunta al usuario un rango de calificaciones en la cual desea buscar y usa vez filtrado se mostraran las peliculas junto a sus datos.
 ````
 ========================================
      Base de Datos de Películas
@@ -1823,31 +2235,50 @@ Se le pregunta al usuario un rango de calificaciones en la cual desea buscar y u
 7) Buscar por década y género
 8) Salir
 Ingrese su opción: 6
-Ingrese el rating minimo de la película: 8
-Ingrese el rating maximo de la película: 9
-Peliculas encontradas
+Ingrese el rating minimo de la película: 9
+Ingrese el rating maximo de la película: 9.3
 -------------------------------
-Título: Casablanca, Año: 1942, Rating: 8.5
+Título: The Godfather
+Año: 1972
+Director(es):Francis Ford Coppola
+Género(s):Crime, Drama
+Rating: 9.2
 -------------------------------
-Título: The Graduate, Año: 1967, Rating: 8.0
+Título: 12 Angry Men
+Año: 1957
+Director(es):Sidney Lumet
+Género(s):Crime, Drama
+Rating: 9.0
 -------------------------------
-Título: Citizen Kane, Año: 1941, Rating: 8.3
+Título: Schindler's List
+Año: 1993
+Director(es):Steven Spielberg
+Género(s):Biography, Drama, History
+Rating: 9.0
 -------------------------------
-Título: 12 Angry Men, Año: 1957, Rating: 9.0
+Título: The Godfather Part II
+Año: 1974
+Director(es):Francis Ford Coppola
+Género(s):Crime, Drama
+Rating: 9.0
 -------------------------------
-Título: Shichinin no samurai, Año: 1954, Rating: 8.6
+Título: The Lord of the Rings: The Return of the King
+Año: 2003
+Director(es):Peter Jackson
+Género(s):Action, Adventure, Drama, Fantasy
+Rating: 9.0
 -------------------------------
-Título: Chinatown, Año: 1974, Rating: 8.1
+Título: The Dark Knight
+Año: 2008
+Director(es):Christopher Nolan
+Género(s):Action, Crime, Drama, Thriller
+Rating: 9.0
 -------------------------------
-Título: Pulp Fiction, Año: 1994, Rating: 8.9
--------------------------------
-Título: Star Wars: Episode V - The Empire Strikes Back, Año: 1980, Rating: 8.7
--------------------------------
-Título: Forrest Gump, Año: 1994, Rating: 8.8
--------------------------------
-Título: Some Like It Hot, Año: 1959, Rating: 8.2
--------------------------------
-Título: Dr. Strangelove or: How I Learned to Stop Worrying and Love the Bomb, Año: 1964, Rating: 8.4
+Título: The Shawshank Redemption
+Año: 1994
+Director(es):Frank Darabont
+Género(s):Drama
+Rating: 9.3
 -------------------------------
 Presione una tecla para continuar...
 ````
@@ -1870,29 +2301,100 @@ Ingrese su opción: 7
 Ingrese la decada de la película: 20
 Ingrese el género de la película: Drama
 -------------------------------
-Título: The Gold Rush, Año: 1925, Rating: 8.1, Genero: Drama
+Título: The General
+Año: 1926
+Director(es):Clyde Bruckman, Buster Keaton
+Género(s):Action, Adventure, Comedy, Drama, War
+Rating: 8.1
 -------------------------------
-Título: The Kid, Año: 1921, Rating: 8.2, Genero: Drama
+Título: The Gold Rush
+Año: 1925
+Director(es):Charles Chaplin
+Género(s):Adventure, Comedy, Drama, Romance, Western
+Rating: 8.1
 -------------------------------
-Título: Bronenosets Potyomkin, Año: 1925, Rating: 7.9, Genero: Drama
+Título: The Kid
+Año: 1921
+Director(es):Charles Chaplin
+Género(s):Comedy, Drama, Family
+Rating: 8.2
 -------------------------------
-Título: Der letzte Mann, Año: 1924, Rating: 8.0, Genero: Drama
+Título: Bronenosets Potyomkin
+Año: 1925
+Director(es):Sergei Eisenstein
+Género(s):Drama, History, Thriller, War
+Rating: 7.9
 -------------------------------
-Título: Steamboat Bill, Jr., Año: 1928, Rating: 7.8, Genero: Drama
+Título: Der letzte Mann
+Año: 1924
+Director(es):F.W. Murnau
+Género(s):Drama
+Rating: 8.0
 -------------------------------
-Título: The Cameraman, Año: 1928, Rating: 8.0, Genero: Drama
+Título: Steamboat Bill, Jr.
+Año: 1928
+Director(es):Buster Keaton, Charles Reisner
+Género(s):Action, Comedy, Drama, Family, Romance
+Rating: 7.8
 -------------------------------
-Título: The Ten Commandments, Año: 1923, Rating: 6.8, Genero: Drama
+Título: The Cameraman
+Año: 1928
+Director(es):Buster Keaton, Edward Sedgwick
+Género(s):Comedy, Drama, Family, Romance
+Rating: 8.0
 -------------------------------
-Título: College, Año: 1927, Rating: 6.9, Genero: Drama
+Título: The Ten Commandments
+Año: 1923
+Director(es):Cecil B. DeMille
+Género(s):Biography, Drama, History
+Rating: 6.8
 -------------------------------
-Título: Blackmail, Año: 1929, Rating: 6.9, Genero: Drama
+Título: College
+Año: 1927
+Director(es):James W. Horne, Buster Keaton
+Género(s):Comedy, Drama, Sport
+Rating: 6.9
 -------------------------------
-Título: Flesh and the Devil, Año: 1926, Rating: 7.6, Genero: Drama
+Título: Blackmail
+Año: 1929
+Director(es):Alfred Hitchcock
+Género(s):Crime, Drama, Thriller
+Rating: 6.9
 -------------------------------
-Título: The Ring, Año: 1927, Rating: 6.1, Genero: Drama
+Título: Flesh and the Devil
+Año: 1926
+Director(es):Clarence Brown
+Género(s):Drama
+Rating: 7.6
 -------------------------------
-Título: The Lodger: A Story of the London Fog, Año: 1927, Rating: 7.3, Genero: Drama
+Título: The Ring
+Año: 1927
+Director(es):Alfred Hitchcock
+Género(s):Drama, Romance, Sport
+Rating: 6.1
+-------------------------------
+Título: The Lodger: A Story of the London Fog
+Año: 1927
+Director(es):Alfred Hitchcock
+Género(s):Crime, Drama, Mystery, Thriller
+Rating: 7.3
 -------------------------------
 Presione una tecla para continuar...
 ````
+
+## Contribuciones 
+
+### Benjamín Sepúlveda:
+
+- Desarrolló las funciones de buscar por década y género, buscar por década.
+- Soluciono errores visibles en el codigo
+- Perfeccionó funciones para evitar errores
+- Redacción del README
+- **Auto-evaluación**: 3 Aporte exelente).
+
+### David Henriquez:
+
+- Implementó la función buscar por género, buscar por rating, buscar por director.
+- Documentación y comentarios en el código.
+- Diseño y redacción del README.
+- **Auto-evaluación**: 3 (Aporte excelente).
