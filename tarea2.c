@@ -344,6 +344,29 @@ void buscar_por_decada(Map *pelis_bydecada){
 }
 
 void buscar_por_director(Map *pelis_bydirector){
+  char director[50];
+  printf("Ingrese el nombre del director: ");
+  scanf(" %[^\n]s", director);
+  MapPair *pair = map_search(pelis_bydirector, director);
+  if(pair != NULL){
+    NodoDirector *nodo = pair->value;
+    char* director2 = list_first(nodo->Peliculas);
+    printf("-------------------------------\n");
+    while(director2 != NULL){
+      Film *peli = (Film *)director2;
+      printf("Título: %s, Año: %d, Rating: %.1f\n", peli->title, peli->year, peli->rating);
+      printf("-------------------------------\n");
+      director2 = list_next(nodo->Peliculas);
+    }
+  }
+  else{
+    printf("No se encontraron películas para el director ingresado.\n");
+  }
+  printf("-------------------------------\n");
+}
+
+/*
+void buscar_por_director(Map *pelis_bydirector){
   char director[100];
   printf("Ingrese el nombre del director: ");
   scanf(" %[^\n]s", director);
@@ -369,7 +392,7 @@ void buscar_por_director(Map *pelis_bydirector){
     printf("No se encontraron películas para el director ingresado.\n");
   }
 }
-
+*/
 void buscar_por_genero(Map *pelis_bygenero){
   char genero[100];
   printf("Ingrese el género de la película: ");
